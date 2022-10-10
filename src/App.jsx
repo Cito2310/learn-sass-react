@@ -1,7 +1,15 @@
-function App() {
-  return (
-    <div>Esto funciona</div>
-  )
-}
+import { Section } from "./components/Section"
 
-export default App
+export const App = () => {
+    return (
+        <Section 
+            title="INSTALAR"
+            paragraphs={[
+                "Para instalar SASS en React, debes usar el comando:"
+            ]}
+            codes={[
+                "npm i sass"
+            ]}
+        />
+    )
+}
