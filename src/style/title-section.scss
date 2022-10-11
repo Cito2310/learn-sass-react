@@ -1,0 +1,15 @@
+@use "../variables";
+
+.title-section {
+    background-color: variables.$background-secondary-color;
+    color: variables.$secondary-text-color;
+    display: flex;
+
+    h1 {
+        font-family: Montserrat;
+        font-size: 3.4em;
+        font-weight: 300;
+
+        margin: 1.8rem 1.8rem 1.8rem variables.$border-left-margin;
+    }
+}

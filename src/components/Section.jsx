@@ -1,20 +1,29 @@
 import PropTypes from 'prop-types';
 
-export const Section = ({ title = "" , paragraphs = [] , codes = [] }) => {
-    
+import "../style/section.scss"
+
+export const Section = ({ title = "" , text = []}) => {
+    const textSection = () => {
+        return text.map( paragraph => {
+            switch (paragraph[0]) {
+                case "paragraph":
+                    return <p key={paragraph[1]}>{paragraph[1]}</p>;
+                    
+                case "code":
+                    return <code key={paragraph[1]}>{paragraph[1]}</code>;
+            }
+        })
+    }
 
     return (
         <div className="section">
             <h2 className="section-title">{title}</h2>
-
-            { paragraphs.map( paragraph => <p key={ paragraph}>{ paragraph }</p> ) }
-            { codes.map( code => <code key={ code }>{ code }</code> ) }
+            { textSection() }
         </div>
     )
 }
 
 Section.propTypes = {
     title: PropTypes.string.isRequired,
-    paragraphs: PropTypes.array.isRequired,
-    codes: PropTypes.array,
+    text: PropTypes.array.isRequired,
 }

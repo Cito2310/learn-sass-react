@@ -1,0 +1,30 @@
+@use "../variables";
+
+.section {
+    margin: 1.8rem variables.$border-left-margin;
+
+    background-color: variables.$background-color;
+    color: variables.$first-text-color;
+    display: flex;
+    flex-direction: column;
+
+
+    h2 {
+        color: variables.$secondary-text-color;
+        font-family: Montserrat;
+        font-size: 1.8em;
+        font-weight: 600;
+    }
+
+    p {
+        margin-bottom: 0.6em;
+    }
+
+    code {
+        font-weight: 400;
+        font-size: 0.95em;
+        background-color: variables.$background-code-color;
+        padding: 0.5rem;
+        width: 400px;
+    }
+}
