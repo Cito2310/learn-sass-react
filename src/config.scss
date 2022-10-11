@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
-html, body h1, h2, p, code {all: unset}
+html, body h1, h2, h3, p, code, button {all: unset}
 
 html, body, #root {
     cursor: default;
@@ -12,4 +12,9 @@ html, body, #root {
     font-weight: 400;
     font-size: 22px;
     margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: row;
 }
